@@ -30,7 +30,7 @@ sudo apt-get -y install libyaml-dev libpython2.7-dev
 sleep 1
 
 cd
-mv pete-assignment flaskserver
+mv soylent flaskserver
 cd flaskserver
 
 sudo virtualenv --no-site-packages --distribute venv && source venv/bin/activate && sudo pip install -r requirements.txt
