@@ -1,0 +1,8 @@
+<!doctype html>
+<title>TEST LIST</title>
+<h1>Print a list</h1>
+
+<h3>County, State | Soybean Production (BU) | Rainfall Today (inches)</h3>
+{% for list_element in your_list %}
+      <p>{{ list_element }}, {{ list_element }} | {{ list_element }} | {{ list_element }} </p>
+{% endfor %}

@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Soybean Production & Rainfall</title>
+<h1>Top Soybean Soybean Producing Counties & Today's Rainfall</h1>
+
+<h1>from the State of: {{ state }}</h1>
+
+<h3>County, State | Soybean Production (BU) | Rainfall Today (inches)</h3>
+{% for list_element in results %}
+      <p>{{ list_element[0] }}, {{ list_element[1] }} | {{ list_element[2] }} | {{ list_element[3] }} </p>
+{% endfor %}

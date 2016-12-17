@@ -1,0 +1,58 @@
+# Script to setup Flask API Server
+#
+
+sudo apt-get -y update
+sleep 2
+
+sudo apt-get -y install unzip
+sudo apt-get -y install python-numpy
+sleep 2
+
+sudo apt-get -y install apache2
+sleep 2
+
+sudo apt-get -y install libapache2-mod-wsgi python-dev
+sleep 2
+
+sudo a2enmod wsgi
+sleep 2
+
+sudo apt-get -y install python-virtualenv
+sleep 2
+
+sudo apt-get -y install python-pip
+sleep 2
+
+sudo pip install -U flask-cors
+sleep 1
+
+sudo apt-get -y install libyaml-dev libpython2.7-dev
+sleep 1
+
+cd
+mv pete-assignment flaskserver
+cd flaskserver
+
+sudo virtualenv --no-site-packages --distribute venv && source venv/bin/activate && sudo pip install -r requirements.txt
+sleep 2
+
+cd /var/www
+sudo mv ~/flaskserver /var/www/flaskserver
+sudo mv /var/www/flaskserver/compute-api.conf /etc/apache2/sites-available/
+sleep 2
+
+sudo a2ensite compute-api
+sleep 4
+
+sudo mkdir /var/www/flaskserver/files
+sudo mkdir /var/www/flaskserver/files/upload
+sudo mkdir /var/www/flaskserver/files/zips
+sudo mkdir /var/www/flaskserver/files/unzips
+sudo chown www-data:www-data -R /var/www/flaskserver/files/
+sudo chmod 755 /var/www/flaskserver/files
+
+sudo service apache2 restart
+
+echo "Node Setup Complete!!"
+sleep 9
+sudo reboot
