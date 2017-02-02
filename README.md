@@ -6,11 +6,11 @@ Get soybean production and rainfall for any county in the USA
 
 All of the code logic is in the 'ComputeApi' directory.  
 
-My server is here: http://52.91.127.162/  
+My server is here: http://54.144.251.53/  
   
 You can input any county in the USA and get soybean production for 2015 and today's rainfall.  
   
-You can lookup any county's soybean production and rainfall: http://52.91.127.162/lookup  
+You can lookup any county's soybean production and rainfall: http://54.144.251.53/lookup  
   
 The framework for the backend is a basic Flask deployment that I built for a few projects.  
   
